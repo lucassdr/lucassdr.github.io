@@ -21,8 +21,8 @@ sections:
     title: Projetos recentes
     posts_number: 4
     actions:
-      - label: Blog
-        url: blog/index.html
+      - label: Projetos
+        url: projects/index.html
         style: button
 seo:
   title: Stackbit Fresh Theme

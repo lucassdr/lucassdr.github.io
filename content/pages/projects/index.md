@@ -1,17 +1,17 @@
 ---
-title: Blog
+title: Projetos
 seo:
-  title: Blog
-  description: This is the blog page
+  title: Projetos
+  description: This is the Projetos page
   extra:
     - name: 'og:type'
       value: website
       keyName: property
     - name: 'og:title'
-      value: Blog
+      value: Projetos
       keyName: property
     - name: 'og:description'
-      value: This is the blog page
+      value: This is the Projetos page
       keyName: property
     - name: 'og:image'
       value: images/1.jpg
@@ -20,11 +20,11 @@ seo:
     - name: 'twitter:card'
       value: summary_large_image
     - name: 'twitter:title'
-      value: Blog
+      value: Projetos
     - name: 'twitter:description'
-      value: This is the blog page
+      value: This is the Projetos page
     - name: 'twitter:image'
       value: images/1.jpg
       relativeUrl: true
-layout: blog
+layout: projects
 ---

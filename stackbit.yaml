@@ -285,10 +285,10 @@ models:
           - stackbit_page_meta
   blog:
     type: page
-    urlPath: /blog
-    label: Blog
-    layout: blog
-    file: blog/index.md
+    urlPath: /projects
+    label: Projetos
+    layout: projects
+    file: projects/index.md
     hideContent: true
     singleInstance: true
     fields:
