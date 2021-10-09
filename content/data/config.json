@@ -1,0 +1,75 @@
+{
+    "title": "Lucas Sodré Teixeira",
+    "path_prefix": "/",
+    "layout_style": "overflow",
+    "palette": "blue",
+    "header": {
+        "title": "Lucas Sodré Teixeira",
+        "tagline": "Software Developer | Design Gráfico | Gerenciador Digital de Negócios",
+        "profile_img": "images/avatar.jpg",
+        "profile_img_alt": "Author avatar",
+        "background": "dark",
+        "has_nav": true,
+        "nav_links": [
+            {
+                "label": "Início",
+                "url": "/",
+                "style": "link"
+            },
+            {
+                "label": "Blog",
+                "url": "/blog/",
+                "style": "link"
+            },
+            {
+                "label": "Guia de estilo",
+                "url": "/style-guide/",
+                "style": "link"
+            },
+            {
+                "label": "Sobre mim",
+                "url": "/about/",
+                "style": "link"
+            },
+            {
+                "label": "Fale comigo",
+                "url": "/contact/",
+                "style": "link"
+            }
+        ],
+        "has_social": true,
+        "social_links": [
+            {
+                "label": "Instagram",
+                "url": "https://www.instagram.com/lucassdr",
+                "style": "icon",
+                "icon_class": "instagram",
+                "new_window": true
+            },
+            {
+                "label": "GitHub",
+                "url": "https://github.com/lucassdr",
+                "style": "icon",
+                "icon_class": "github",
+                "new_window": true
+            },
+            {
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com/in/lucassdr",
+                "style": "icon",
+                "icon_class": "linkedin",
+                "new_window": true
+            },
+            {
+                "label": "DEV",
+                "url": "https://dev.to/lucassdr",
+                "style": "icon",
+                "icon_class": "dev",
+                "new_window": true
+            }
+        ]
+    },
+    "footer": {
+        "content": "&copy; Lucas Sodré Teixeira"
+    }
+}
