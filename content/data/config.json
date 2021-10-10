@@ -22,11 +22,6 @@
                 "style": "link"
             },
             {
-                "label": "Guia de estilo",
-                "url": "/style-guide/",
-                "style": "link"
-            },
-            {
                 "label": "Sobre mim",
                 "url": "/about/",
                 "style": "link"
