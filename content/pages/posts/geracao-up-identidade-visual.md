@@ -2,7 +2,7 @@
 title: Geração UP - Identidade Visual
 excerpt: >-
   Gerção Ungida e Profética, conhecida na Igreja Metodista Central em Duque de Caxias como Geração UP, é um projeto idealizado pelo Ministério de Louvor da própria igreja e tem como objetivo uma série de eventos deste meio.
-date: '2018-01-11'
+date: '2018-03-30'
 thumb_img_path: images/geracao-up-identidade-visual.jpg
 thumb_img_alt: A red fox in a rocky forest
 content_img_path: images/geracao-up-identidade-visual.jpg
