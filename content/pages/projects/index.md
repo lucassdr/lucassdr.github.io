@@ -2,7 +2,7 @@
 title: Projetos
 seo:
   title: Projetos
-  description: This is the Projetos page
+  description: Essa é a página que contém alguns dos projetos
   extra:
     - name: 'og:type'
       value: website
@@ -11,7 +11,7 @@ seo:
       value: Projetos
       keyName: property
     - name: 'og:description'
-      value: This is the Projetos page
+      value: Essa é a página que contém alguns dos projetos
       keyName: property
     - name: 'og:image'
       value: images/1.jpg
@@ -22,7 +22,7 @@ seo:
     - name: 'twitter:title'
       value: Projetos
     - name: 'twitter:description'
-      value: This is the Projetos page
+      value: Essa é a página que contém alguns dos projetos
     - name: 'twitter:image'
       value: images/1.jpg
       relativeUrl: true
