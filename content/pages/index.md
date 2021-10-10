@@ -22,33 +22,33 @@ sections:
     posts_number: 4
     actions:
       - label: Projetos
-        url: projects/index.html
+        url: projects
         style: button
 seo:
-  title: Stackbit Fresh Theme
-  description: The preview of the Fresh theme
+  title: Lucas Sodré Teixeira
+  description: Desenvolvedoder de sSites, sistemas e aplicativos, design gráfico, social media e gerenciador digital de negócios.
   extra:
     - name: 'og:type'
       value: website
       keyName: property
     - name: 'og:title'
-      value: Stackbit Fresh Theme
+      value: Lucas Sodré Teixeira
       keyName: property
     - name: 'og:description'
-      value: The preview of the Fresh theme
+      value: Desenvolvedoder de sSites, sistemas e aplicativos, design gráfico, social media e gerenciador digital de negócios.
       keyName: property
     - name: 'og:image'
-      value: images/4.jpg
+      value: images/author.jpg
       keyName: property
       relativeUrl: true
     - name: 'twitter:card'
       value: summary_large_image
     - name: 'twitter:title'
-      value: Stackbit Fresh Theme
+      value: Lucas Sodré Teixeira
     - name: 'twitter:description'
-      value: The preview of the Fresh theme
+      value: Desenvolvedoder de sSites, sistemas e aplicativos, design gráfico, social media e gerenciador digital de negócios.
     - name: 'twitter:image'
-      value: images/4.jpg
+      value: images/author.jpg
       relativeUrl: true
 layout: advanced
 ---
