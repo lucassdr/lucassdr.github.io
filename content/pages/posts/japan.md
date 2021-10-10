@@ -6,9 +6,9 @@ excerpt: >-
   see the use of tatami mats and sliding doors that break down the distinction
   between rooms and indoor and outdoor space.
 date: '2019-03-24'
-thumb_img_path: images/2.jpg
+thumb_img_path: images/studio-mrd-identidade-visual.jpg
 thumb_img_alt: Fushimi Inari Shrine in Kyoto
-content_img_path: images/2.jpg
+content_img_path: images/studio-mrd-identidade-visual.jpg
 content_img_alt: Fushimi Inari Shrine in Kyoto
 seo:
   title: A Weekend in Japan
@@ -28,7 +28,7 @@ seo:
         architecture
       keyName: property
     - name: 'og:image'
-      value: images/2.jpg
+      value: images/studio-mrd-identidade-visual.jpg
       keyName: property
       relativeUrl: true
     - name: 'twitter:card'
@@ -40,7 +40,7 @@ seo:
         The Shrines of Ise have been celebrated as the prototype of Japanese
         architecture
     - name: 'twitter:image'
-      value: images/2.jpg
+      value: images/studio-mrd-identidade-visual.jpg
       relativeUrl: true
 layout: post
 ---
