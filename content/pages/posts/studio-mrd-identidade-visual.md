@@ -4,9 +4,9 @@ excerpt: >-
   Tem lugares que nos transmite bem estar naturalmente e um desses é o Studio MRD. Esta identidade visual foi concebida após várias conversas, com entendimento cada vez mais profundo de como é o Studio MRD, seus funcionários, sua localização... e o mais importante: a cada atendimento os clientes se sentem cada vez melhores.
 date: '2019-07-12'
 thumb_img_path: images/studio-mrd-identidade-visual.jpg
-thumb_img_alt: Fushimi Inari Shrine in Kyoto
+thumb_img_alt: 
 content_img_path: images/studio-mrd-identidade-visual.jpg
-content_img_alt: Fushimi Inari Shrine in Kyoto
+content_img_alt: 
 seo:
   title: Studio MRD - Identidade Visual
   description: >-

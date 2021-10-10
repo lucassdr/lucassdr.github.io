@@ -4,9 +4,9 @@ excerpt: >-
   Uma identidade visual totalmente inclusiva e que fosse adaptável, mas imutável. É com esse breve resumo que afirmo: foi a mais difícil que criei. Os motivos dessa dificuldade são vários, mas também afirmo que foi uma experiência incrível e única.
 date: '2020-06-01'
 thumb_img_path: images/vitiligo_e_vida-logo.jpg
-thumb_img_alt: Fushimi Inari Shrine in Kyoto
+thumb_img_alt: 
 content_img_path: images/vitiligo_e_vida-logo.jpg
-content_img_alt: Fushimi Inari Shrine in Kyoto
+content_img_alt: 
 seo:
   title: Vitiligo e Vida - Identidade Visual
   description: >-

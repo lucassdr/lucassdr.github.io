@@ -4,9 +4,9 @@ excerpt: >-
   Tem projetos que a gente para e pensa: como representar em uma identidade visual esse grupo incrível? Esse é o Ministério de Louvor Essência.
 date: '2018-10-31'
 thumb_img_path: images/essencia-identidade-visual.jpg
-thumb_img_alt: Fushimi Inari Shrine in Kyoto
+thumb_img_alt: 
 content_img_path: images/essencia-identidade-visual.jpg
-content_img_alt: Fushimi Inari Shrine in Kyoto
+content_img_alt: 
 seo:
   title: Essência Ministério de Louvor - Identidade Visual
   description: >-
