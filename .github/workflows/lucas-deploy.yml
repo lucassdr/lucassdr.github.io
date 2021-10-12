@@ -28,12 +28,11 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
-    - run: npm run predeploy
-    - run: npm run deploy
+    - run: npm run export
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
         branch: gh-pages # The branch the action should deploy to.
-        folder: dist # The folder the action should deploy.
+        folder: out # The folder the action should deploy.
