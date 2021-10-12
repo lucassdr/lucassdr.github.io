@@ -7,7 +7,9 @@
     "dev": "next dev",
     "develop": "next dev",
     "fetch": "sourcebit fetch",
-    "build": "next build && next export",
+    "build-export": "next build && next export",
+    "build": "next build",
+    "export": "next export",
     "start": "next start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
