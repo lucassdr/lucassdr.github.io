@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
         return (
             <Html {...this.helmetHtmlAttrComponents}>
                 <Head>
+                    <script src='../utils/clarity.js' />
                     <script async src="https://analytics.umami.is/script.js" data-website-id="efccc30d-8a20-4bd0-a746-4f9106b1ca62"></script>
                     {this.helmetHeadComponents}
                     </Head>
