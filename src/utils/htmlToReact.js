@@ -1,26 +1,25 @@
 import React from 'react';
-import ReactHtmlParser, { convertNodeToElement } from 'react-html-parser';
-import ScriptTag from 'react-script-tag';
+import parse, { domToReact } from 'html-react-parser';
 import Link from './link';
 import _ from 'lodash';
 
-const convertChildren = (children, index) => _.map(children, (childNode) => convertNodeToElement(childNode, index, _.noop()));
+const convertChildren = (children) => domToReact(children);
 
 export default function htmlToReact(html) {
     if (!html) {
         return null;
     }
-    return ReactHtmlParser(html, {
+    return parse(html, {
         transform: (node, index) => {
             if (node.type === 'script') {
                 if (!_.isEmpty(node.children)) {
                     return (
-                        <ScriptTag key={index} {...node.attribs}>
-                            {convertChildren(node.children, index)}
-                        </ScriptTag>
+                        <script key={index} {...node.attribs}>
+                            {convertChildren(node.children)}
+                        </script>
                     );
                 } else {
-                    return <ScriptTag key={index} {...node.attribs} />;
+                    return <script key={index} {...node.attribs} />;
                 }
             } else if (node.type === 'tag' && node.name === 'a') {
                 const href = node.attribs.href;
@@ -29,7 +28,7 @@ export default function htmlToReact(html) {
                 if (_.isEmpty(props)) {
                     return (
                         <Link key={index} href={href} {...props}>
-                            {convertChildren(node.children, index)}
+                            {convertChildren(node.children)}
                         </Link>
                     );
                 }
