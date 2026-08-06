@@ -6,13 +6,13 @@ export type PrivateProjectItem = {
 
 export const privateProjects: PrivateProjectItem[] = [
   {
-    title: "Calendário de Conta",
-    description: "Calendário mensal de contas pessoais",
+    title: "Calendário de Contas",
+    description: "Gerenciador pessoal de contas recorrentes mensais.",
     href: "https://calendario-de-contas-pessoal.vercel.app/",
   },
   {
-    title: "F1 Race Monitor",
-    description: "Monitor das sessões de F1 ao vivo",
+    title: "F1 Pessoal",
+    description: "Live timing pessoal para acompanhar sessões de Fórmula 1 com dados da OpenF1.",
     href: "https://f1-race-monitor-private.vercel.app/",
-  }
+  },
 ];

@@ -15,37 +15,37 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
   {
-    slug: "civic-dashboard",
-    title: "Civic Dashboard",
-    summary: "Organizar dados públicos dispersos para análise de impacto urbano.",
-    outcome: "Painel reduziu o tempo de leitura de indicadores em 42% para equipes internas.",
-    stack: ["Next.js", "TypeScript", "D3"],
-    tags: ["dados", "produto"],
-    links: [
-      { label: "Case study", href: "https://example.com/civic-dashboard" },
-      { label: "Repositório", href: "https://github.com/example/civic-dashboard" }
-    ],
+    slug: "central-da-copa",
+    title: "Central da Copa",
+    summary:
+      "Agenda de jogos de futebol do dia, com horários, transmissões e filtro por time, competição e canal.",
+    outcome: "No ar em centraldacopa.app.br.",
+    stack: ["Next.js"],
+    tags: ["produto", "esporte"],
+    links: [{ label: "Acessar", href: "https://www.centraldacopa.app.br/" }],
   },
   {
-    slug: "calm-finance",
-    title: "Calm Finance",
-    summary: "Simplificar decisões financeiras pessoais sem jargões.",
-    outcome: "Usuários relataram 35% menos dúvidas no primeiro uso.",
-    stack: ["React", "TypeScript", "Tailwind"],
-    tags: ["fintech", "ux"],
-    links: [
-      { label: "Demo", href: "https://example.com/calm-finance" }
-    ],
+    slug: "central-da-copa-2026",
+    title: "Central da Copa 2026",
+    summary:
+      "Painel dedicado à Copa do Mundo 2026: jogos, horários de Brasília, classificação, mata-mata, seleções e onde assistir.",
+    outcome: "No ar durante a Copa do Mundo 2026.",
+    stack: ["Next.js"],
+    tags: ["produto", "esporte"],
+    links: [{ label: "Acessar", href: "https://central-da-copa-2026.vercel.app/" }],
   },
   {
-    slug: "studio-archive",
-    title: "Studio Archive",
-    summary: "Reorganizar acervo criativo para consulta rápida e curadoria.",
-    outcome: "Equipe editorial reduziu 60% do tempo de busca por referências.",
-    stack: ["Next.js", "MDX", "Contentful"],
-    tags: ["editorial", "conteudo"],
+    slug: "bingo-virtual",
+    title: "Bingo Virtual",
+    summary: "Cartela de bingo virtual para jogar em grupo, sem precisar imprimir nada.",
+    outcome: "Publicado como Claude Artifact.",
+    stack: ["Claude Artifact"],
+    tags: ["utilidade"],
     links: [
-      { label: "Case study", href: "https://example.com/studio-archive" }
+      {
+        label: "Abrir",
+        href: "https://claude.ai/public/artifacts/9c9d3727-6cc9-41f9-8b4e-a7a6c3b16246",
+      },
     ],
-  }
+  },
 ];
