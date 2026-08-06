@@ -5,11 +5,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { themeInitScript } from "@/lib/theme-script";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Lucas SDR — UX/UI Designer",
-  description: "Projetos de UX/UI de Lucas SDR.",
+  title: "Lucas SDR — Desenvolvedor de Software",
+  description: "Aplicações web, APIs e integrações de Lucas SDR.",
 };
 
 export default function RootLayout({
