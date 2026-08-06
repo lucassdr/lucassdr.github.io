@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-background: #f7f5f2;
+  --color-foreground: #1c1c1c;
+  --color-primary: #2f6b58;
+  --color-primary-foreground: #ffffff;
+  --color-surface: #ffffff;
+  --color-muted: rgba(28, 28, 28, 0.7);
+  --color-border: rgba(28, 28, 28, 0.5);
+  --color-danger: #b91c1c;
+}
+
+/* "Sistema": segue o tema do SO enquanto o usuário não escolher explicitamente. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-background: #17181a;
+    --color-foreground: #f2f0ec;
+    --color-primary: #55b393;
+    --color-primary-foreground: #17181a;
+    --color-surface: #1f2123;
+    --color-muted: rgba(242, 240, 236, 0.7);
+    --color-border: rgba(242, 240, 236, 0.38);
+    --color-danger: #f87171;
+  }
+}
+
+/* Escolha manual do usuário, sobrepõe o sistema. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-background: #17181a;
+  --color-foreground: #f2f0ec;
+  --color-primary: #55b393;
+  --color-primary-foreground: #17181a;
+  --color-surface: #1f2123;
+  --color-muted: rgba(242, 240, 236, 0.7);
+  --color-border: rgba(242, 240, 236, 0.38);
+  --color-danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-background text-foreground antialiased transition-colors duration-150;
+}
+
+a {
+  @apply text-foreground underline-offset-4;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.border-subtle {
+  border-color: var(--color-border);
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
