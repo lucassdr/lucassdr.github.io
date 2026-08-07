@@ -1,8 +1,6 @@
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Card } from "@/components/ui/Card";
-import { Tag } from "@/components/ui/Tag";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { projects } from "@/content/data/projects";
 
@@ -35,18 +33,10 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold">{project.title}</h3>
                   <p className="muted">{project.summary}</p>
                   <p className="text-sm">{project.outcome}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.stack.map((item) => (
-                      <Tag key={item}>{item}</Tag>
-                    ))}
-                  </div>
                 </div>
-                <Link
-                  href={`/projects/${project.slug}`}
-                  className="rounded-sm text-sm font-medium text-primary focus-ring"
-                >
+                <LinkButton href={`/projects/${project.slug}`} variant="secondary" size="sm">
                   Ver detalhes
-                </Link>
+                </LinkButton>
               </div>
             </Card>
           ))}

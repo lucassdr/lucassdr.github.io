@@ -42,77 +42,89 @@
   --color-border: rgba(242, 240, 236, 0.38);
 }
 
-* {
-  box-sizing: border-box;
+/*
+ * Estilos base/de componente vivem em @layer para respeitar a ordem de
+ * prioridade do Tailwind v4: CSS fora de qualquer @layer sempre vence
+ * utilitários (mesmo com especificidade menor), então uma regra "a { color }"
+ * sem layer aqui apagava classes como text-primary ou text-background em
+ * qualquer link/botão — foi o que deixava o CTA "Ver projetos" com o texto
+ * invisível (mesma cor do fundo) em ambos os temas.
+ */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-150;
+  }
+
+  ::selection {
+    background: rgba(47, 107, 88, 0.2);
+  }
+
+  a {
+    @apply text-foreground underline-offset-4;
+  }
 }
 
-body {
-  @apply bg-background text-foreground font-sans antialiased transition-colors duration-150;
-}
+@layer components {
+  .muted {
+    color: var(--color-muted);
+  }
 
-::selection {
-  background: rgba(47, 107, 88, 0.2);
-}
+  .border-subtle {
+    border-color: var(--color-border);
+  }
 
-a {
-  @apply text-foreground underline-offset-4;
-}
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
 
-.muted {
-  color: var(--color-muted);
-}
+  .mdx {
+    @apply text-base leading-relaxed;
+  }
 
-.border-subtle {
-  border-color: var(--color-border);
-}
+  .mdx h1 {
+    @apply text-3xl font-semibold tracking-tight mt-10 mb-4;
+  }
 
-.focus-ring {
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
-}
+  .mdx h2 {
+    @apply text-2xl font-semibold tracking-tight mt-8 mb-3;
+  }
 
-.mdx {
-  @apply text-base leading-relaxed;
-}
+  .mdx h3 {
+    @apply text-xl font-semibold tracking-tight mt-6 mb-2;
+  }
 
-.mdx h1 {
-  @apply text-3xl font-semibold tracking-tight mt-10 mb-4;
-}
+  .mdx p {
+    @apply my-4;
+  }
 
-.mdx h2 {
-  @apply text-2xl font-semibold tracking-tight mt-8 mb-3;
-}
+  .mdx ul {
+    @apply my-4 list-disc pl-5;
+  }
 
-.mdx h3 {
-  @apply text-xl font-semibold tracking-tight mt-6 mb-2;
-}
+  .mdx ol {
+    @apply my-4 list-decimal pl-5;
+  }
 
-.mdx p {
-  @apply my-4;
-}
+  .mdx blockquote {
+    @apply my-6 border-l-2 pl-4 text-sm;
+    border-color: var(--color-border);
+  }
 
-.mdx ul {
-  @apply my-4 list-disc pl-5;
-}
+  .mdx pre {
+    @apply my-6 overflow-x-auto rounded-sm border bg-surface px-4 py-3 text-sm;
+    border-color: var(--color-border);
+  }
 
-.mdx ol {
-  @apply my-4 list-decimal pl-5;
-}
+  .mdx code {
+    @apply rounded-sm bg-surface px-1.5 py-0.5 text-sm;
+  }
 
-.mdx blockquote {
-  @apply my-6 border-l-2 pl-4 text-sm;
-  border-color: var(--color-border);
-}
-
-.mdx pre {
-  @apply my-6 overflow-x-auto rounded-sm border bg-surface px-4 py-3 text-sm;
-  border-color: var(--color-border);
-}
-
-.mdx code {
-  @apply rounded-sm bg-surface px-1.5 py-0.5 text-sm;
-}
-
-.mdx hr {
-  @apply my-10;
-  border-color: var(--color-border);
+  .mdx hr {
+    @apply my-10;
+    border-color: var(--color-border);
+  }
 }
