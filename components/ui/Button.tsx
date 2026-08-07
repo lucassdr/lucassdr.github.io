@@ -5,7 +5,7 @@ type ButtonVariant = "primary" | "secondary" | "ghost" | "accent";
 type ButtonSize = "sm" | "md" | "lg";
 
 export const baseButtonStyles =
-  "inline-flex items-center justify-center gap-2 rounded-sm border border-subtle text-sm font-medium transition-colors focus-ring disabled:cursor-not-allowed disabled:opacity-60";
+  "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-sm border border-subtle text-sm font-medium transition-colors focus-ring disabled:cursor-not-allowed disabled:opacity-60";
 
 export const buttonVariantStyles: Record<ButtonVariant, string> = {
   primary: "bg-primary text-primary-foreground hover:bg-primary/90",

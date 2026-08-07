@@ -6,7 +6,6 @@ export type ProjectFrontmatter = {
   title: string;
   description: string;
   role?: string;
-  tags?: string[];
 };
 
 const projectsDirectory = path.join(process.cwd(), "content", "projects");
@@ -21,7 +20,6 @@ export function getProjectBySlug(slug: string) {
       title: String(data.title ?? ""),
       description: String(data.description ?? ""),
       role: data.role ? String(data.role) : undefined,
-      tags: (data.tags as string[]) ?? [],
     },
     content,
   };

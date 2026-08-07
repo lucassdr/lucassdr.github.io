@@ -8,8 +8,6 @@ export type ProjectItem = {
   title: string;
   summary: string;
   outcome: string;
-  stack: string[];
-  tags: string[];
   links?: ProjectLink[];
 };
 
@@ -20,8 +18,6 @@ export const projects: ProjectItem[] = [
     summary:
       "Agenda de jogos de futebol do dia, com horários, transmissões e filtro por time, competição e canal.",
     outcome: "No ar em centraldacopa.app.br.",
-    stack: ["Next.js"],
-    tags: ["produto", "esporte"],
     links: [{ label: "Acessar", href: "https://www.centraldacopa.app.br/" }],
   },
   {
@@ -30,8 +26,6 @@ export const projects: ProjectItem[] = [
     summary:
       "Painel dedicado à Copa do Mundo 2026: jogos, horários de Brasília, classificação, mata-mata, seleções e onde assistir.",
     outcome: "No ar durante a Copa do Mundo 2026.",
-    stack: ["Next.js"],
-    tags: ["produto", "esporte"],
     links: [{ label: "Acessar", href: "https://central-da-copa-2026.vercel.app/" }],
   },
   {
@@ -39,8 +33,6 @@ export const projects: ProjectItem[] = [
     title: "Bingo Virtual",
     summary: "Cartela de bingo virtual para jogar em grupo, sem precisar imprimir nada.",
     outcome: "Publicado como Claude Artifact.",
-    stack: ["Claude Artifact"],
-    tags: ["utilidade"],
     links: [
       {
         label: "Abrir",
