@@ -5,7 +5,7 @@ import { ExternalLink } from "@/components/ui/ExternalLink";
 
 export const metadata = {
   title: "Contato — Lucas SDR",
-  description: "Contato direto para conversas sobre design e produto.",
+  description: "Contato direto para conversas sobre desenvolvimento e produto.",
 };
 
 export default function ContactPage() {

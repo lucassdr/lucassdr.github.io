@@ -12,13 +12,13 @@ export default function HomePage() {
   return (
     <Container className="space-y-16">
       <section className="space-y-6">
-        <p className="text-sm uppercase tracking-[0.2em] muted">UX/UI designer</p>
+        <p className="text-sm uppercase tracking-[0.2em] muted">Desenvolvedor de software</p>
         <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
-          Projeto interfaces claras e resolvo problemas reais de produto.
+          Construo aplicações web, APIs e integrações que resolvem problemas reais de negócio.
         </h1>
         <p className="muted max-w-2xl text-lg">
-          Trabalho com pesquisa, sistemas de design e interface. Abaixo, os projetos em que
-          isso deu certo.
+          Vou além de implementar tarefas: entendo o problema, o contexto e os riscos técnicos
+          antes de propor solução. Abaixo, alguns projetos.
         </p>
         <LinkButton href="/projects">Ver projetos</LinkButton>
       </section>

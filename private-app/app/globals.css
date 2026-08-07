@@ -1,17 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  color-scheme: light;
+@theme {
   --color-background: #f7f5f2;
   --color-foreground: #1c1c1c;
   --color-primary: #2f6b58;
   --color-primary-foreground: #ffffff;
   --color-surface: #ffffff;
+  --color-danger: #b91c1c;
+}
+
+:root {
+  color-scheme: light;
   --color-muted: rgba(28, 28, 28, 0.7);
   --color-border: rgba(28, 28, 28, 0.5);
-  --color-danger: #b91c1c;
 }
 
 /* "Sistema": segue o tema do SO enquanto o usuário não escolher explicitamente. */

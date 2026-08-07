@@ -1,14 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@source not "../private-app";
 
-:root {
-  color-scheme: light;
+@theme {
   --color-background: #f7f5f2;
   --color-foreground: #1c1c1c;
   --color-primary: #2f6b58;
   --color-primary-foreground: #ffffff;
   --color-surface: #ffffff;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
   --color-muted: rgba(28, 28, 28, 0.7);
   --color-border: rgba(28, 28, 28, 0.5);
 }
@@ -96,11 +99,13 @@ a {
 }
 
 .mdx blockquote {
-  @apply my-6 border-l-2 border-subtle pl-4 text-sm;
+  @apply my-6 border-l-2 pl-4 text-sm;
+  border-color: var(--color-border);
 }
 
 .mdx pre {
-  @apply my-6 overflow-x-auto rounded-sm border border-subtle bg-surface px-4 py-3 text-sm;
+  @apply my-6 overflow-x-auto rounded-sm border bg-surface px-4 py-3 text-sm;
+  border-color: var(--color-border);
 }
 
 .mdx code {
@@ -108,5 +113,6 @@ a {
 }
 
 .mdx hr {
-  @apply my-10 border-subtle;
+  @apply my-10;
+  border-color: var(--color-border);
 }
