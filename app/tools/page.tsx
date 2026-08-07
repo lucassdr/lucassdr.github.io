@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function ToolsPage() {
   return (
-    <Container className="space-y-10">
+    <Container className="space-y-10 py-14">
       <SectionHeader title="Swiss Army Knife" description="Ferramentas pequenas que uso no dia a dia." />
 
       <div className="space-y-4">

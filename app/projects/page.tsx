@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <Container className="space-y-10">
+    <Container className="space-y-10 py-14">
       <SectionHeader title="Projetos" description="Problema, solução e resultado, por projeto." />
       <Suspense fallback={null}>
         <ProjectsList />

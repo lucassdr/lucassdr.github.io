@@ -40,7 +40,7 @@ export function SiteHeader() {
   }, [isOpen]);
 
   return (
-    <header className="border-b border-subtle bg-background">
+    <header className="site-header">
       <Container className="flex h-16 items-center justify-between">
         {isSectionRoute ? (
           <div className="flex w-full items-center justify-between">
@@ -69,10 +69,11 @@ export function SiteHeader() {
           </div>
         ) : (
           <>
-            <Link href="/" className="rounded-sm text-sm font-semibold tracking-wide focus-ring">
-              Lucas Sodré
+            <Link href="/" className="site-header__brand focus-ring">
+              <span>Lucas Sodré</span>
+              <span aria-hidden="true">lucas@sodre:~$</span>
             </Link>
-            <nav className="hidden items-center gap-6 md:flex">
+            <nav className="site-header__nav hidden items-center gap-6 md:flex" aria-label="Navegação principal">
               <NavLink href="/projects">Projetos</NavLink>
               <NavLink href="/tools">Swiss Army Knife</NavLink>
               <ThemeToggle />

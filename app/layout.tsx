@@ -30,7 +30,7 @@ export default function RootLayout({
           Pular para o conteúdo
         </a>
         <SiteHeader />
-        <main id="main-content" className="min-h-[70vh] py-14">
+        <main id="main-content" className="min-h-[70vh]">
           {children}
         </main>
         <SiteFooter />
