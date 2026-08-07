@@ -12,7 +12,11 @@ type NavLinkProps = {
 
 export function NavLink({ href, children, className }: NavLinkProps) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  // Normaliza a barra final: com trailingSlash (export estático), o
+  // pathname real vem como "/projects/", nunca igual ao href "/projects".
+  const normalizedPath = pathname?.replace(/\/+$/, "") || "/";
+  const normalizedHref = href.replace(/\/+$/, "") || "/";
+  const isActive = normalizedPath === normalizedHref;
 
   return (
     <Link
