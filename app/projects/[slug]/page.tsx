@@ -2,9 +2,8 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Tag } from "@/components/ui/Tag";
 import { Divider } from "@/components/ui/Divider";
-import { ExternalLink } from "@/components/ui/ExternalLink";
+import { LinkButton } from "@/components/ui/LinkButton";
 import { mdxComponents } from "@/components/mdx/MDXComponents";
 import { projects } from "@/content/data/projects";
 import { getProjectBySlug } from "@/lib/content";
@@ -26,7 +25,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   }
 
   return {
-    title: `${project.title} — Lucas SDR`,
+    title: `${project.title} — Lucas Sodré`,
     description: project.summary,
   };
 }
@@ -49,17 +48,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.title}
         </h1>
         <p className="muted max-w-2xl">{frontmatter.description || project.summary}</p>
-        <div className="flex flex-wrap gap-2">
-          {project.stack.map((item) => (
-            <Tag key={item}>{item}</Tag>
-          ))}
-        </div>
         {project.links?.length ? (
           <div className="flex flex-wrap gap-4">
             {project.links.map((link) => (
-              <ExternalLink key={link.href} href={link.href}>
+              <LinkButton key={link.href} href={link.href} size="lg" target="_blank">
                 {link.label}
-              </ExternalLink>
+              </LinkButton>
             ))}
           </div>
         ) : null}

@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProjectsList } from "./ProjectsList";
 
 export const metadata = {
-  title: "Projetos — Lucas SDR",
+  title: "Projetos — Lucas Sodré",
   description: "Seleção de projetos com contexto, solução e impacto.",
 };
 

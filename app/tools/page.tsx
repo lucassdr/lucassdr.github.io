@@ -6,7 +6,7 @@ import { ExternalLink } from "@/components/ui/ExternalLink";
 import { tools } from "@/content/data/tools";
 
 export const metadata = {
-  title: "Swiss Army Knife — Lucas SDR",
+  title: "Swiss Army Knife — Lucas Sodré",
   description: "Pequenas ferramentas e utilidades públicas construídas por curiosidade.",
 };
 

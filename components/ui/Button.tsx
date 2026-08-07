@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "accent";
 type ButtonSize = "sm" | "md" | "lg";
 
 export const baseButtonStyles =
@@ -11,6 +11,10 @@ export const buttonVariantStyles: Record<ButtonVariant, string> = {
   primary: "bg-primary text-primary-foreground hover:bg-primary/90",
   secondary: "bg-transparent text-foreground hover:bg-foreground/5",
   ghost: "border-transparent text-foreground hover:bg-foreground/5",
+  // Inverte foreground/background: por definição é a combinação de maior
+  // contraste do tema, tanto claro quanto escuro. Usado em CTAs que
+  // precisam se destacar sem depender do tom exato de --color-primary.
+  accent: "border-transparent bg-foreground text-background hover:opacity-90",
 };
 
 export const buttonSizeStyles: Record<ButtonSize, string> = {

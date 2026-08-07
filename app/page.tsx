@@ -20,7 +20,9 @@ export default function HomePage() {
           Vou além de implementar tarefas: entendo o problema, o contexto e os riscos técnicos
           antes de propor solução. Abaixo, alguns projetos.
         </p>
-        <LinkButton href="/projects">Ver projetos</LinkButton>
+        <LinkButton href="/projects" variant="accent" size="lg">
+          Ver projetos
+        </LinkButton>
       </section>
 
       <section className="space-y-6">

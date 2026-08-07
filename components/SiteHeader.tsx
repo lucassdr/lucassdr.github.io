@@ -7,16 +7,17 @@ import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const PRIVATE_PROJECTS_URL =
-  process.env.NEXT_PUBLIC_PRIVATE_APP_URL ?? "https://projetos-privados.vercel.app";
-
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const isProjectsRoute = pathname?.startsWith("/projects");
+  // Normaliza a barra final: o export estático usa trailingSlash, então o
+  // pathname real é "/projects/" — comparar com "/projects" sempre falhava
+  // e o botão "Voltar" acabava apontando para a própria página de listagem.
+  const normalizedPath = pathname?.replace(/\/+$/, "") || "/";
+  const isProjectsRoute = normalizedPath.startsWith("/projects");
   const isSectionRoute = isProjectsRoute;
   const sectionLabel = "Projetos";
-  const backHref = pathname === "/projects" ? "/" : "/projects";
+  const backHref = normalizedPath === "/projects" ? "/" : "/projects";
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -69,25 +70,14 @@ export function SiteHeader() {
         ) : (
           <>
             <Link href="/" className="rounded-sm text-sm font-semibold tracking-wide focus-ring">
-              Lucas SDR
+              Lucas Sodré
             </Link>
             <nav className="hidden items-center gap-6 md:flex">
               <NavLink href="/projects">Projetos</NavLink>
               <NavLink href="/tools">Swiss Army Knife</NavLink>
-              <NavLink href="/contact">Contato</NavLink>
-              <a
-                href={PRIVATE_PROJECTS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-sm text-sm font-medium muted hover:text-foreground focus-ring"
-              >
-                Projetos privados
-                <span className="sr-only"> (abre em nova aba)</span>
-              </a>
               <ThemeToggle />
             </nav>
             <div className="flex items-center gap-3 md:hidden">
-              <ThemeToggle />
               <button
                 ref={menuButtonRef}
                 type="button"
@@ -138,7 +128,7 @@ export function SiteHeader() {
         <div id="mobile-nav" className="fixed inset-0 z-50 bg-background md:hidden">
           <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
             <Link href="/" className="rounded-sm text-sm font-semibold tracking-wide focus-ring">
-              Lucas SDR
+              Lucas Sodré
             </Link>
             <button
               type="button"
@@ -175,34 +165,17 @@ export function SiteHeader() {
                 <Link
                   href="/tools"
                   className="rounded-sm focus-ring"
-                  aria-current={pathname === "/tools" ? "page" : undefined}
+                  aria-current={normalizedPath === "/tools" ? "page" : undefined}
                   onClick={() => setIsOpen(false)}
                 >
-                  Ferramentas e Apps
+                  Swiss Army Knife
                 </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="rounded-sm focus-ring"
-                  aria-current={pathname === "/contact" ? "page" : undefined}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contato
-                </Link>
-              </li>
-              <li>
-                <a
-                  href={PRIVATE_PROJECTS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-sm focus-ring"
-                >
-                  Projetos privados
-                  <span className="sr-only"> (abre em nova aba)</span>
-                </a>
               </li>
             </ul>
+            <div className="mt-8 border-t border-subtle pt-6">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] muted">Tema</p>
+              <ThemeToggle />
+            </div>
           </nav>
         </div>
       ) : null}

@@ -8,8 +8,8 @@ import { themeInitScript } from "@/lib/theme-script";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Lucas SDR — Desenvolvedor de Software",
-  description: "Aplicações web, APIs e integrações de Lucas SDR.",
+  title: "Lucas Sodré — Desenvolvedor de Software",
+  description: "Aplicações web, APIs e integrações de Lucas Sodré.",
 };
 
 export default function RootLayout({

@@ -3,7 +3,7 @@ import "./globals.css";
 import { themeInitScript } from "@/lib/theme-script";
 
 export const metadata: Metadata = {
-  title: "Projetos privados — Lucas SDR",
+  title: "Projetos privados — Lucas Sodré",
   robots: { index: false, follow: false },
 };
 

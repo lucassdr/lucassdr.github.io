@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/Card";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 
 export const metadata = {
-  title: "Contato — Lucas SDR",
+  title: "Contato — Lucas Sodré",
   description: "Contato direto para conversas sobre desenvolvimento e produto.",
 };
 
