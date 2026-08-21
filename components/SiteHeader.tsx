@@ -18,6 +18,8 @@ export function SiteHeader() {
   const isSectionRoute = isProjectsRoute;
   const sectionLabel = "Projetos";
   const backHref = normalizedPath === "/projects" ? "/" : "/projects";
+  const privateAppUrl =
+    process.env.NEXT_PUBLIC_PRIVATE_APP_URL ?? "https://projetos-privados.vercel.app";
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -77,6 +79,12 @@ export function SiteHeader() {
               <nav className="site-header__nav hidden items-center gap-6 md:flex" aria-label="Navegação principal">
                 <NavLink href="/projects">Projetos</NavLink>
                 <NavLink href="/tools">Swiss Army Knife</NavLink>
+                <a
+                  href={privateAppUrl}
+                  className="rounded-sm text-sm font-medium text-foreground transition-colors hover:text-primary focus-ring"
+                >
+                  Projetos privados
+                </a>
                 <ThemeToggle />
               </nav>
               <div className="flex items-center gap-3 md:hidden">
@@ -173,6 +181,15 @@ export function SiteHeader() {
                 >
                   Swiss Army Knife
                 </Link>
+              </li>
+              <li>
+                <a
+                  href={privateAppUrl}
+                  className="rounded-sm focus-ring"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Projetos privados
+                </a>
               </li>
             </ul>
             <div className="mt-8 border-t border-subtle pt-6">
