@@ -40,93 +40,95 @@ export function SiteHeader() {
   }, [isOpen]);
 
   return (
-    <header className="site-header">
-      <Container className="flex h-16 items-center justify-between">
-        {isSectionRoute ? (
-          <div className="flex w-full items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Link
-                href={backHref}
-                className="inline-flex items-center gap-2 rounded-sm border border-subtle px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground/5 focus-ring"
-                aria-label="Voltar"
-              >
-                <svg aria-hidden="true" width="14" height="14" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M12.5 4.5L7 10L12.5 15.5"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                Voltar
-              </Link>
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
-                {sectionLabel}
-              </span>
-            </div>
-            <ThemeToggle />
-          </div>
-        ) : (
-          <>
-            <Link href="/" className="site-header__brand focus-ring">
-              <span>Lucas Sodré</span>
-              <span aria-hidden="true">lucas@sodre:~$</span>
-            </Link>
-            <nav className="site-header__nav hidden items-center gap-6 md:flex" aria-label="Navegação principal">
-              <NavLink href="/projects">Projetos</NavLink>
-              <NavLink href="/tools">Swiss Army Knife</NavLink>
+    <>
+      <header className="site-header">
+        <Container className="flex h-16 items-center justify-between">
+          {isSectionRoute ? (
+            <div className="flex w-full items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Link
+                  href={backHref}
+                  className="inline-flex items-center gap-2 rounded-sm border border-subtle px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground/5 focus-ring"
+                  aria-label="Voltar"
+                >
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M12.5 4.5L7 10L12.5 15.5"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  Voltar
+                </Link>
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
+                  {sectionLabel}
+                </span>
+              </div>
               <ThemeToggle />
-            </nav>
-            <div className="flex items-center gap-3 md:hidden">
-              <button
-                ref={menuButtonRef}
-                type="button"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-subtle text-foreground transition-colors hover:bg-foreground/5 focus-ring"
-                aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-                aria-expanded={isOpen}
-                aria-controls="mobile-nav"
-                onClick={() => setIsOpen((prev) => !prev)}
-              >
-                {isOpen ? (
-                  <svg
-                    aria-hidden="true"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M5 5L15 15M15 5L5 15"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    aria-hidden="true"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M3 6H17M3 10H17M3 14H17"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                )}
-              </button>
             </div>
-          </>
-        )}
-      </Container>
+          ) : (
+            <>
+              <Link href="/" className="site-header__brand focus-ring">
+                <span>Lucas Sodré</span>
+                <span aria-hidden="true">lucas@sodre:~$</span>
+              </Link>
+              <nav className="site-header__nav hidden items-center gap-6 md:flex" aria-label="Navegação principal">
+                <NavLink href="/projects">Projetos</NavLink>
+                <NavLink href="/tools">Swiss Army Knife</NavLink>
+                <ThemeToggle />
+              </nav>
+              <div className="flex items-center gap-3 md:hidden">
+                <button
+                  ref={menuButtonRef}
+                  type="button"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-subtle text-foreground transition-colors hover:bg-foreground/5 focus-ring"
+                  aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+                  aria-expanded={isOpen}
+                  aria-controls="mobile-nav"
+                  onClick={() => setIsOpen((prev) => !prev)}
+                >
+                  {isOpen ? (
+                    <svg
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M5 5L15 15M15 5L5 15"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      aria-hidden="true"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M3 6H17M3 10H17M3 14H17"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  )}
+                </button>
+              </div>
+            </>
+          )}
+        </Container>
+      </header>
 
       {!isSectionRoute && isOpen ? (
-        <div id="mobile-nav" className="fixed inset-0 z-50 bg-background md:hidden">
+        <div id="mobile-nav" className="fixed inset-0 z-[100] min-h-dvh bg-background md:hidden">
           <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
             <Link href="/" className="rounded-sm text-sm font-semibold tracking-wide focus-ring">
               Lucas Sodré
@@ -180,6 +182,6 @@ export function SiteHeader() {
           </nav>
         </div>
       ) : null}
-    </header>
+    </>
   );
 }
