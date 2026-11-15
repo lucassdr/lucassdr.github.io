@@ -29,14 +29,14 @@ export const projects: ProjectItem[] = [
     links: [{ label: "Acessar", href: "https://central-da-copa-2026.vercel.app/" }],
   },
   {
-    slug: "bingo-virtual",
-    title: "Bingo Virtual",
-    summary: "Cartela de bingo virtual para jogar em grupo, sem precisar imprimir nada.",
-    outcome: "Publicado como Claude Artifact.",
+    slug: "gameslab",
+    title: "GamesLab",
+    summary: "Minha central de jogos para se divertir direto no navegador.",
+    outcome: "No ar em lucassdr-gameslab.pages.dev.",
     links: [
       {
-        label: "Abrir",
-        href: "https://claude.ai/public/artifacts/9c9d3727-6cc9-41f9-8b4e-a7a6c3b16246",
+        label: "Acessar GamesLab",
+        href: "https://lucassdr-gameslab.pages.dev/?",
       },
     ],
   },

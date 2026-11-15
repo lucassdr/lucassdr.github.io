@@ -43,14 +43,21 @@ const featuredProjects: FeaturedProject[] = [
     result: "No ar durante a Copa do Mundo 2026.",
   },
   {
-    slug: "bingo-virtual",
-    title: "Bingo Virtual",
-    filename: "bingo-virtual.feature",
-    status: "publicado",
+    slug: "gameslab",
+    title: "GamesLab",
+    filename: "gameslab.feature",
+    status: "no ar",
     statusVariant: "live",
-    problem: "Jogar bingo em grupo geralmente exige imprimir e organizar cartelas.",
-    solution: "Cartela de bingo virtual, pronta para jogar em grupo direto do navegador.",
-    result: "Publicado como Claude Artifact.",
+    problem: "Meus jogos precisam de um lugar único para serem encontrados e acessados.",
+    solution: "GamesLab: minha central de jogos para se divertir direto no navegador.",
+    result: (
+      <>
+        No ar em{" "}
+        <a href="https://lucassdr-gameslab.pages.dev/?" target="_blank" rel="noopener noreferrer">
+          lucassdr-gameslab.pages.dev<span className="sr-only"> (abre em nova aba)</span>
+        </a>
+      </>
+    ),
   },
 ];
 
